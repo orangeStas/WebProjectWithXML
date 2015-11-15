@@ -10,15 +10,13 @@ import by.epam.task5.exception.CommandException;
 import by.epam.task5.logic.command.CommandHelper;
 import by.epam.task5.logic.command.CommandName;
 import by.epam.task5.logic.command.ICommand;
+import by.epam.task5.logic.command.LockManager;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 import java.util.concurrent.locks.Lock;
-import java.util.concurrent.locks.ReentrantLock;
 
 public class ParseCommand implements ICommand {
-
-    private Lock lock = new ReentrantLock();
 
     @Override
     public String execute(HttpServletRequest request) throws CommandException {
@@ -26,6 +24,7 @@ public class ParseCommand implements ICommand {
         XMLDao dao;
         List<Computer> devices = null;
         try {
+            Lock lock = LockManager.getLock();
             lock.tryLock();
             try {
                 dao = XMLDaoFactory.getInstance().getDao(XMLDaoFactory.DAOType.valueOf(request.getParameter(RequestParameterName.PARSER).toUpperCase()));
