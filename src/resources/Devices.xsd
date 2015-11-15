@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://127.0.0.1/device"
+        xmlns:computers = "http://127.0.0.1/device" >
+  <element name="computers" type="computers:devicesType"/>
+
+  <complexType name="devicesType">
+    <sequence>
+      <element type="computers:computerType" name="computer" minOccurs="1" maxOccurs="unbounded"/>
+    </sequence>
+  </complexType>
+
+  <complexType name="computerType">
+    <sequence>
+      <element type="computers:typeType" name="type"/>
+      <element type="boolean" name="critical"/>
+    </sequence>
+
+    <attribute type="ID" name="id" use="required"/>
+    <attribute type="string" name="name" use="required"/>
+
+    <attribute name="origin" use="required">
+      <simpleType>
+        <restriction base="string">
+          <pattern value="[A-z]+"/>
+        </restriction>
+      </simpleType>
+    </attribute>
+
+    <attribute type="positiveInteger" name="price" default="1"/>
+  </complexType>
+
+  <complexType name="typeType">
+    <sequence>
+      <element type="boolean" name="peripheral"/>
+      <element type="positiveInteger" name="power"/>
+      <element type="computers:hardwareType" name="hardware"/>
+      <element type="computers:portsType" name="ports"/>
+    </sequence>
+  </complexType>
+
+  <simpleType name="portsType">
+    <list itemType="computers:portsEnum"/>
+  </simpleType>
+
+  <simpleType name="portsEnum">
+    <restriction base="string">
+      <enumeration value="USB"/>
+      <enumeration value="COM"/>
+      <enumeration value="LPT"/>
+    </restriction>
+  </simpleType>
+
+
+  <complexType name="hardwareType">
+    <sequence>
+      <element type="boolean" name="keyboard"/>
+      <element type="boolean" name="mouse"/>
+      <element type="boolean" name="speakers"/>
+    </sequence>
+  </complexType>
+
+
+</schema>

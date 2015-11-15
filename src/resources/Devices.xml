@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dev:computers xmlns:dev="http://127.0.0.1/device"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://127.0.0.1/schema Devices.xsd">
+
+    <computer id="ID-1" name="Asus N56JK" origin="USA" price="745">
+        <type>
+            <peripheral>true</peripheral>
+            <power>745</power>
+            <hardware>
+                <keyboard>true</keyboard>
+                <mouse>true</mouse>
+                <speakers>false</speakers>
+            </hardware>
+            <ports>USB COM</ports>
+        </type>
+        <critical>true</critical>
+    </computer>
+
+    <computer id="ID-2" name="HP Pavilion" origin="China" price="500">
+        <type>
+            <peripheral>false</peripheral>
+            <power>400</power>
+            <hardware>
+                <keyboard>false</keyboard>
+                <mouse>true</mouse>
+                <speakers>false</speakers>
+            </hardware>
+            <ports>USB</ports>
+        </type>
+        <critical>false</critical>
+    </computer>
+
+    <computer id="ID-3" name="Dell" origin="USA" price="550">
+        <type>
+            <peripheral>true</peripheral>
+            <power>745</power>
+            <hardware>
+                <keyboard>true</keyboard>
+                <mouse>false</mouse>
+                <speakers>false</speakers>
+            </hardware>
+            <ports>USB COM LPT</ports>
+        </type>
+        <critical>false</critical>
+    </computer>
+
+    <computer id="ID-4" name="MSI M9h" origin="USA" price="400">
+        <type>
+            <peripheral>true</peripheral>
+            <power>600</power>
+            <hardware>
+                <keyboard>true</keyboard>
+                <mouse>true</mouse>
+                <speakers>true</speakers>
+            </hardware>
+            <ports>LPT</ports>
+        </type>
+        <critical>true</critical>
+    </computer>
+
+    <computer id="ID-5" name="MacBook" origin="USA" price="1000">
+        <type>
+            <peripheral>true</peripheral>
+            <power>400</power>
+            <hardware>
+                <keyboard>true</keyboard>
+                <mouse>true</mouse>
+                <speakers>false</speakers>
+            </hardware>
+            <ports>USB</ports>
+        </type>
+        <critical>true</critical>
+    </computer>
+
+    <computer id="ID-6" name="iMac" origin="USA" price="1300">
+        <type>
+            <peripheral>true</peripheral>
+            <power>700</power>
+            <hardware>
+                <keyboard>true</keyboard>
+                <mouse>true</mouse>
+                <speakers>true</speakers>
+            </hardware>
+            <ports>USB COM LPT</ports>
+        </type>
+        <critical>true</critical>
+    </computer>
+
+    <computer id="ID-7" name="LG gv5" origin="China" price="400">
+        <type>
+            <peripheral>false</peripheral>
+            <power>500</power>
+            <hardware>
+                <keyboard>false</keyboard>
+                <mouse>false</mouse>
+                <speakers>false</speakers>
+            </hardware>
+            <ports>COM</ports>
+        </type>
+        <critical>false</critical>
+    </computer>
+
+    <computer id="ID-8" name="ACER Aspire" origin="USA" price="440">
+        <type>
+            <peripheral>true</peripheral>
+            <power>300</power>
+            <hardware>
+                <keyboard>true</keyboard>
+                <mouse>false</mouse>
+                <speakers>false</speakers>
+            </hardware>
+            <ports>COM LPT</ports>
+        </type>
+        <critical>true</critical>
+    </computer>
+
+    <computer id="ID-9" name="Lenovo hg21" origin="China" price="200">
+        <type>
+            <peripheral>true</peripheral>
+            <power>300</power>
+            <hardware>
+                <keyboard>false</keyboard>
+                <mouse>true</mouse>
+                <speakers>false</speakers>
+            </hardware>
+            <ports>USB</ports>
+        </type>
+        <critical>false</critical>
+    </computer>
+
+    <computer id="ID-10" name="SAMSUNG LT213" origin="Korea" price="490">
+        <type>
+            <peripheral>false</peripheral>
+            <power>400</power>
+            <hardware>
+                <keyboard>true</keyboard>
+                <mouse>true</mouse>
+                <speakers>true</speakers>
+            </hardware>
+            <ports>USB</ports>
+        </type>
+        <critical>true</critical>
+    </computer>
+
+    <computer id="ID-11" name="ASUS ZenBook" origin="China" price="800">
+        <type>
+            <peripheral>true</peripheral>
+            <power>370</power>
+            <hardware>
+                <keyboard>true</keyboard>
+                <mouse>false</mouse>
+                <speakers>true</speakers>
+            </hardware>
+            <ports>USB COM LPT</ports>
+        </type>
+        <critical>true</critical>
+    </computer>
+</dev:computers>
